@@ -185,7 +185,7 @@ export default Backbone.View.extend({
   getFrameOffset(el) {
     if (!this.frmOff || el) {
       const frame = this.frame.el;
-      const frEl = el ? el.ownerDocument.defaultView.frameElement : frame;
+      const frEl = el?.ownerDocument?.defaultView?.frameElement;
       this.frmOff = this.offset(frEl || frame);
     }
     return this.frmOff;
